@@ -10,9 +10,15 @@ You supply your own copy of the game. Nothing from it is in this repo.
 
 ## Status
 
-**Early.** Boots and plays the intro (logos and the opening crawl) in the
-remaster's window. Menus and flight next.
+**Alpha.** Flies. Boots, plays the intro, registers a pilot, walks the
+Imperial concourse, plays the Combat Chamber briefing and flies mission 1
+(TIE Fighter Combat #1: Gunnery) in the TIE cockpit. Sound plays. The 3D is
+still the game's software renderer: TIE's own Direct3D mode is not switched on
+yet (ROADMAP.md).
 
+![In flight](docs/screenshots/flight.png)
+![Concourse](docs/screenshots/concourse.png)
+![Briefing](docs/screenshots/briefing.png)
 ![Intro](docs/screenshots/intro.png)
 
 ## The remaster

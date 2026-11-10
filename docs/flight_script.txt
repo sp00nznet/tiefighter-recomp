@@ -1,0 +1,8 @@
+The test run that flies Combat Chamber mission 1 (TIE Fighter Combat #1: Gunnery):
+
+build\tierecomp.exe --run --watchdog 180 --keys "on:logo.lfd,4:space,on:reg640.lfd,3:s,3.5:p,4:o,4.5:o,5:n,5.5:z,7:enter,on:concourse.wav,3:move:270:240,4:click:270:240,on:combat.lfd,8:move:545:352,10:click:545:352,14:click:545:352,18:click:545:352,22:click:545:352,40:move:480:405,41:click:480:405,48:click:480:405,100:shot=work/flight.bmp"
+
+Space skips the intro; the name is typed at registration (a new pilot); the
+concourse's Combat Chamber is at 270,240; the Imperial emblem button (545,352)
+enters the briefing (clicked until it takes: the screen comes up slowly);
+Enter Mission is the briefing's fifth button (480,405).
