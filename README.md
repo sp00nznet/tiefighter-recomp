@@ -6,6 +6,8 @@ remaster as the [X-Wing recomp](https://github.com/sp00nznet/xwing-recomp),
 which this is a fork of: the two games share an engine. The game's x86 code is
 lifted to C by pcrecomp and runs on its native32 runtime.
 
+![Flying in the remaster: Direct3D 11 at the window's resolution](docs/screenshots/hero.gif)
+
 You supply your own copy of the game. Nothing from it is in this repo.
 
 ## Status
