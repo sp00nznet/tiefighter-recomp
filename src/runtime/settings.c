@@ -1,4 +1,4 @@
-﻿/*
+/*
  * settings: the remaster's options, kept in tie.ini beside the program.
  *
  *   F10            the settings menu (also right-click outside the picture)
@@ -102,14 +102,16 @@ void settings_menu(HWND w, int x, int y) {
  * 2 640x480x16, 3 3D hardware) but never writes a changed one back: the mode
  * is set there before the game reads it. */
 void settings_apply_prefs(void) {
-    HANDLE f = CreateFileA("prefs.cfg", GENERIC_READ | GENERIC_WRITE, 0, NULL, OPEN_EXISTING, 0, NULL);
+    /* TIE: foption.cfg is 0x3A bytes of options, then the display mode as a
+     * dword (0 320x200, 1 640x480x8, 2 640x480x16, 3 Direct3D). */
+    HANDLE f = CreateFileA("foption.cfg", GENERIC_READ | GENERIC_WRITE, 0, NULL, OPEN_EXISTING, 0, NULL);
     if (f == INVALID_HANDLE_VALUE) return;
     unsigned char b[0x60];
     DWORD n = 0;
-    if (ReadFile(f, b, sizeof b, &n, NULL) && n > 0x1B) {
+    if (ReadFile(f, b, sizeof b, &n, NULL) && n >= 0x3E) {
         unsigned char want = g_hw3d ? 3 : 2;
-        if (b[0x1B] != want) {
-            b[0x1B] = want;
+        if (b[0x3A] != want) {
+            b[0x3A] = want;
             SetFilePointer(f, 0, NULL, FILE_BEGIN);
             WriteFile(f, b, n, &n, NULL);
         }

@@ -12,9 +12,8 @@ You supply your own copy of the game. Nothing from it is in this repo.
 
 **Alpha.** Flies. Boots, plays the intro, registers a pilot, walks the
 Imperial concourse, plays the Combat Chamber briefing and flies mission 1
-(TIE Fighter Combat #1: Gunnery) in the TIE cockpit. Sound plays. The 3D is
-still the game's software renderer: TIE's own Direct3D mode is not switched on
-yet (ROADMAP.md).
+(TIE Fighter Combat #1: Gunnery) in the TIE cockpit, in the game's Direct3D
+mode drawn at the window's resolution. Sound plays.
 
 ![In flight](docs/screenshots/flight.png)
 ![Concourse](docs/screenshots/concourse.png)

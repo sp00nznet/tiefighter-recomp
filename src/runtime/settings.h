@@ -3,7 +3,7 @@
 #include <windows.h>
 
 extern int g_flight_mouse, g_flight_pad, g_mods, g_hw3d;
-void settings_apply_prefs(void);   /* the game's display mode in prefs.cfg (cwd = game folder) */
+void settings_apply_prefs(void);   /* the game's display mode in foption.cfg (cwd = game folder) */
 
 void settings_load(void);
 void settings_save(void);
